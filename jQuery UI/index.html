@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jquery ui</title>
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<script src="app.js"></script>
+	<script src="draggable.js"></script>
+	<script src="droppable.js"></script>
+	<script src="resizable.js"></script>
+	<script src="selectable.js"></script>
+	<script src="sortable.js"></script>
+	<script src="Accordion.js"></script>
+	<script src="Autocomplete.js"></script>
+	<script src="Datepicker.js"></script>
+	<script src="Dialog.js"></script>
+	<script src="progressbar.js"></script>
+	<script src="menu.js"></script>
+	<script src="slider.js"></script>
+	<script src="spinner.js"></script>
+	<script src="tab.js"></script>
+	<script src="effet.js"></script>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+	<style>
+		.ui-selected {
+			background-color: #FFCCCC;
+		}
+
+		.ui-menu:after {
+			content: ".";
+			display: block;
+			clear: both;
+			visibility: hidden;
+			line-height: 0;
+			height: 0;
+		}
+		.ui-menu .ui-menu-item {
+			display: inline-block;
+			float: left;
+			margin: 0;
+			padding: 10px;
+			width: auto;			
+		}
+
+		.toggler { width: 500px; height: 200px; position: relative; }
+    	#button { padding: .5em 1em; text-decoration: none; }
+    	#effect { width: 240px; height: 170px; padding: 0.4em; position: relative; }
+    	#effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+    	.ui-effects-transfer { border: 2px dotted gray; }
+	</style>
+</head>
+<body>
+	<!-- <button>NMID</button>
+	<a href="http://nmid.cqupt.edu.cn/" id="a_btn">NMID</a> -->
+
+	<!-- <div style="width: 100px; height: 100px; border: 2px solid #FF0000;" id="div"></div> -->
+
+	<!-- <div style="width: 100px; height: 100px; border: 2px solid #FF00FF" id="Rect1"></div>
+	<div style="width: 200px; height: 200px; border: 2px solid #FF0000" id="Rect2"></div> -->
+
+	<!-- <div style="width: 100px; height: 100px; background-color: #FFCCCC;" id="div"></div> -->
+
+	<!-- <strong>实验室最帅的人</strong>
+	<ul id="select">
+		<li id="right">A.Robin</li>
+		<li>B.Robin</li>
+		<li>C.Robin</li>
+	</ul>
+	<a href="##" id="btn">提交</a> -->
+
+
+	<!-- <ul id="sortable">
+		<li>apple</li>
+		<li>orange</li>
+		<li>banana</li>
+		<li>pear</li>
+	</ul> -->
+
+
+ 	<!-- <div id="accordion">
+ 		<h3>选项1</h3>
+ 		<div>
+ 			<p>hello jQuery</p>
+ 		</div>
+
+ 		<h3>选项2</h3>
+ 		<div>
+ 			<p>hello jQuery</p>
+ 		</div>
+
+ 		<h3>选项3</h3>
+ 		<div>
+ 			<p>hello jQuery</p>
+ 		</div>
+
+ 		<h3>选项4</h3>
+ 		<div>
+ 			<p>hello jQuery</p>
+ 		</div>
+ 	</div> -->
+
+
+ 	<!-- <label for="tags">Tags:</label>
+ 	<input id="tags"> -->
+
+ 	<!-- <p>Date: <input type="text" id="datepicker"></p>
+ 	<a href="##" id="btn">按钮</a> -->
+
+ 	<!-- <div id="div">
+ 		<p>这是一个对话框</p>
+ 	</div>
+ 	<a href="##" id="btn"> 按钮</a> -->
+
+ 	<!-- <div id="pb"></div> -->
+
+
+ 	<!-- <ul id="menu">
+ 		<li>
+ 			<a href="##">Java</a>
+ 			<ul>
+ 				<li><a href="##">Java EE</a></li>
+ 				<li><a href="##">Java SE</a></li>
+ 				<li><a href="##">Java ME</a></li>
+ 			</ul>
+ 		</li>
+ 		<li>
+ 			<a href="##">Javascript</a>
+ 			<ul>
+ 				<li><a href="##">node.js</a></li>
+ 				<li><a href="##">vue.js</a></li>
+ 				<li><a href="##">angular.js</a></li>
+ 			</ul>
+ 		</li>
+ 		<li>C</li>
+ 		<li>C++</li>
+ 	</ul> -->
+
+ 	<!-- <span id="span">0</span>
+ 	<div id="slider"></div> -->
+
+ 	<!-- <input id="input">
+ 	<button id="btn">getValue</button> -->
+
+ 	<!-- <div id="tabs">
+ 		<ul>
+ 			<li><a href="#hello1">hello1</a></li>
+ 			<li><a href="#hello2">hello2</a></li>
+ 			<li><a href="#hello3">hello3</a></li>
+ 		</ul>
+ 		<div id="hello1">
+ 			<p>hello1</p>
+ 			<p>hello</p>
+ 			<p>hello</p>
+ 		</div>
+ 		<div id="hello2">
+ 			<p>hello2</p>
+ 			<p>hello</p>
+ 			<p>hello</p>
+ 		</div>
+ 		<div id="hello3">
+ 			<p>hello3</p>
+ 			<p>hello</p>
+ 			<p>hello</p>
+ 		</div>
+ 	</div> -->
+
+ 	 <div class="toggler">
+  		<div id="effect" class="ui-widget-content ui-corner-all">
+    		<h3 class="ui-widget-header ui-corner-all">Effect</h3>
+    		<p>
+     	 	Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede. Nulla lorem metus, adipiscing ut, luctus sed, hendrerit vitae, mi.
+    		</p>
+  		</div>
+	</div>
+ 
+	<select name="effects" id="effectTypes">
+  	<option value="blind">Blind</option>
+  	<option value="bounce">Bounce</option>
+  	<option value="clip">Clip</option>
+  	<option value="drop">Drop</option>
+  	<option value="explode">Explode</option>
+  	<option value="fade">Fade</option>
+  	<option value="fold">Fold</option>
+  	<option value="highlight">Highlight</option>
+  	<option value="puff">Puff</option>
+  	<option value="pulsate">Pulsate</option>
+  	<option value="scale">Scale</option>
+  	<option value="shake">Shake</option>
+  	<option value="size">Size</option>
+  	<option value="slide">Slide</option>
+  	<option value="transfer">Transfer</option>
+	</select>
+ 
+	<button id="button" class="ui-state-default ui-corner-all">Run Effect</button>
+</body>
+</html>
